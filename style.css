@@ -28,7 +28,7 @@ header{
 #menu{
   height: 65px;
   background-color: #EEE;
-  
+
 
 }
 #menu > *{
@@ -93,7 +93,7 @@ header{
   background: grey;
   float: left;
 }
-input{
+#leftinput{
   width:90%;
   height:40px;
   margin-left:-1px;
@@ -112,6 +112,9 @@ input{
 #writer{
   display: flex;
   position: fixed;
-  width: 80%;
+  width: 100%;
   bottom:0;
+}
+#msgwriter{
+  width:50%;
 }
