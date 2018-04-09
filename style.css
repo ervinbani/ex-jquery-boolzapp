@@ -1,0 +1,117 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #DBDBD4;
+}
+header{
+  width:100vw;
+  height: 40px;
+  background: #009688;
+  color:white;
+  position: fixed;
+  top: 0;
+}
+
+/*#central-window{
+  min-width: 100vw;
+  height: 900px;
+  margin: -110px auto 100px;
+  background-color: white;
+  border-radius: 5;
+  position: fixed;
+}*/
+
+/* BARRA SUPERIORE */
+#menu{
+  height: 65px;
+  background-color: #EEE;
+  
+
+}
+#menu > *{
+  float: left;
+  margin-top: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-right:15px;
+}
+#profilo{
+  width: 30%;
+  border-right: 1px solid lightgrey;
+}
+#friends{
+  width: 70%;
+}
+/* PARTE SINISTRA DELLA BARRA */
+#profilo img{
+  border-radius: 50%;
+  height: 60px;
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+
+#profilo #icons-menu{
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+  font-size: 25px;
+  color: #727A7E;
+  margin-right: 5%;
+  cursor: pointer;
+
+
+
+
+}
+/* PARTE DESTRA DELLA BARRA */
+#friends #left-cnt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor:pointer;
+}
+
+
+.left-container{
+  width: 30%;
+  height: 100%;
+  background: lightgrey;
+  float: left;
+}
+.right-container{
+  width: 70%;
+  min-height: 900px;
+
+  background: grey;
+  float: left;
+}
+input{
+  width:90%;
+  height:40px;
+  margin-left:-1px;
+  border-radius: 5px;
+}
+.btn{
+  width:10%;
+  height: 40px;
+  margin-right:-1px;
+  background: white;
+  border-radius: 5px;
+
+
+}
+
+#writer{
+  display: flex;
+  position: fixed;
+  width: 80%;
+  bottom:0;
+}
