@@ -3,6 +3,8 @@ $(document).ready(function(){
   var input=$('#msgwriter');
   messaggio.click(function(){
     $('.greentext').text(input.val());
+    $('.whitetext').text("Ok", 5000);
+
   });
 
 });

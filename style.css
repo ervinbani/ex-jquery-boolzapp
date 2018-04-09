@@ -100,8 +100,6 @@ header{
   margin-right:-1px;
   background: white;
   border-radius: 5px;
-
-
 }
 
 #writer{
@@ -114,7 +112,23 @@ header{
   width:50%;
 }
 .right-container .greentext{
+  width:auto;
+  height: auto;
   float:right;
+  margin-right: 50px;
+
+  border:1px solid green;
+  border-radius: 5px;
   background: green;
   color: white;
+}
+.right-container .whitetext{
+  width:auto;
+  height: auto;
+  margin-left: 50px;
+  float:left;
+  border:1px solid green;
+  border-radius: 5px;
+  background: white;
+  color: black;
 }
