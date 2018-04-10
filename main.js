@@ -1,9 +1,14 @@
 $(document).ready(function(){
 
-  var cont=$('.left-container');
+
+  var i=0;
+
+    var cont=$('.contact');
   cont.click(function(){
-    $(this).children('.friends-img').attr("src",$('.contact-image').attr("src"));
-    $(this).children('.Contatto').text($('.contact-name').text());
+    $('.friends-img').removeAttr("src");
+    $('.friends-img').attr("src",$('.contact-image').attr("src"));
+    $('.Contatto').text($('.contact-name').text());
+    i++;
 
   });
   var messaggio=$('#btn-right');

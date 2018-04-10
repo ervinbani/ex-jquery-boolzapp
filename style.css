@@ -161,8 +161,8 @@ nav{
 
 }
 .right-container .greentext{
-  width:100px;
-  height: auto;
+  width:51%;
+  height:auto;
   float:right;
   margin-right: 50px;
   padding-left:10px;
@@ -173,7 +173,7 @@ nav{
 }
 .right-container .whitetext{
   padding-top:0;
-  width:auto;
+  width:51%;
   height: auto;
   margin-left: 50px;
   float:left;
