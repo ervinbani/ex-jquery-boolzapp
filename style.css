@@ -91,7 +91,10 @@ nav{
   border-radius: 5px;
   float:left;
   border-bottom: 1px solid lightgrey;
-
+}
+.left-container .contact:hover{
+  background: lightgrey;
+  cursor: pointer;
 }
 #contact-img{
   width: 20%;
@@ -158,16 +161,15 @@ nav{
 
 }
 .right-container .greentext{
-  width:auto;
+  width:100px;
   height: auto;
   float:right;
   margin-right: 50px;
-  padding-top:0;
-
-  border:1px solid #9DE1FE;
+  padding-left:10px;
+  border:1px solid #DCF8C6;
   border-radius: 5px;
-  background-color: #A4A4A4;
-  color: white;
+  background-color: #DCF8C6;
+  color: black;
 }
 .right-container .whitetext{
   padding-top:0;
@@ -175,7 +177,7 @@ nav{
   height: auto;
   margin-left: 50px;
   float:left;
-  border:1px solid green;
+  border:1px solid white;
   border-radius: 5px;
   background: white;
   color: black;
