@@ -11,50 +11,32 @@ header{
   height: 40px;
   background: #009688;
   color:white;
-  position: fixed;
   top: 0;
+  position: sticky;
 }
 
-
-
-/* BARRA SUPERIORE */
-#menu{
-  width: 100;
+nav{
+  width: 100%;
   height: 65px;
+}
 
 
-}
-#menu > *{
-  float: left;
-  margin-top: 40px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  padding-right:15px;
-}
-#profilo{
-  width: 30%;
-  border-right: 1px solid lightgrey;
-
-}
-#friends{
-  width: 69%;
-}
-#friends>img{
-  height: 90%;
-  border-radius:50%;
-  float:left;
-}
 /* PARTE SINISTRA DELLA BARRA */
-#profilo img{
+#profilo>img{
+  height: 100%;
   border-radius: 50%;
-  height: 60px;
   margin-left: 5%;
   cursor: pointer;
 }
-
+#profilo{
+  width: 30%;
+  height: 100%;
+  border-right: 1px solid lightgrey;
+  float:left;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
 
 #profilo #icons-menu{
   display: flex;
@@ -64,7 +46,7 @@ header{
   color: #727A7E;
   margin-right: 5%;
   cursor: pointer;
-
+  padding-top: 20px;
 }
 /* PARTE DESTRA DELLA BARRA */
 #friends #left-cnt{
@@ -74,7 +56,27 @@ header{
   height: 100%;
   cursor:pointer;
 }
+#friends{
+  width: 70%;
+  height: 100%;
+  border-right: 1px solid lightgrey;
+  float:right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right:15px;
 
+}
+#friends>img{
+  height: 90%;
+  border-radius:50%;
+  float:left;
+}
+.search-menu{
+  width: 100%;
+  height: 100%;
+  border:5px solid #FBFBFB;
+}
 
 .left-container{
   width: 30%;
@@ -82,32 +84,32 @@ header{
   background-color: white;
   float: left;
 }
+
 .left-container .contact{
   width: 100%;
   height:75px;
-  border-bottom: 1px solid lightgrey;
   border-radius: 5px;
+  float:left;
+  border-bottom: 1px solid lightgrey;
+
 }
 #contact-img{
   width: 20%;
   height: 100%;
   float: left;
+
 }
 #contact-img>img{
   height: 100%;
   border-radius:50%;
-  float:left;
 
 }
 
 .left-container .contact .info-container{
-  width: 80%;
+  width: 79%;
   height: 100%;
-  float: left;
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  float: right;
+
 }
 .right-container{
   width: 70%;
@@ -120,28 +122,39 @@ header{
   width:90%;
   height:40px;
   margin-left:-1px;
-  border-radius: 5px;
+  outline: none;
+  border: none;
+
+
 }
 .btn{
   width:10%;
   height: 40px;
   margin-right:-1px;
   background: white;
-  border-radius: 5px;
   padding-top: 0;
+  outline: none;
+  border: none;
 }
+.btn:hover{
+  background-color: grey;
+}
+
 
 #writer{
   display: flex;
   position: fixed;
   width: 100%;
   bottom:0;
-  padding-top: 0;
+  border: 5px solid #FBFBFB;
+
+
 }
 #msgwriter{
   width:50%;
   padding-top: 0;
-  border-radius: 5px;
+  outline: none;
+  border: none;
 
 }
 .right-container .greentext{
@@ -151,9 +164,9 @@ header{
   margin-right: 50px;
   padding-top:0;
 
-  border:1px solid green;
+  border:1px solid #9DE1FE;
   border-radius: 5px;
-  background: lightgreen;
+  background-color: #A4A4A4;
   color: white;
 }
 .right-container .whitetext{

@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-  var contact=$('.contact');
+  var contact=$('.left-container');
   $(this).children().click(function(){
-    $('#friends-img').attr("src",$('#contact-image').attr("src"));
-    $('#Contatto').text($('#contact-name').text());
+    $('.friends-img').attr("src",$('.contact-image').attr("src"));
+    $('.Contatto').text($('.contact-name').text());
 
   });
   var messaggio=$('#btn-right');
