@@ -1,14 +1,17 @@
+
+
 $(document).ready(function(){
 
 
 
     var cont=$('.contact');
-  cont.click(function(){
+  cont.each(function(){
+    $(this).click(function(){
     $('.friends-img').attr("src",$('.contact-image').attr("src"));
 
     $('.Contatto').text($('.contact-name').text());
 
-
+});
   });
   var messaggio=$('#btn-right');
   var input=$('#msgwriter');
@@ -24,10 +27,10 @@ $(document).ready(function(){
 
   });
   var clearDiv = '<div class="clear"></div>',
-messageTagOpen = '<div class="greentext">',
-messageTagClose = '</div>',
-spanTimeOpen = '<span class="message-time">',
-spanTimeClose = '</span>';
+    messageTagOpen = '<div class="greentext">',
+    messageTagClose = '</div>',
+    spanTimeOpen = '<span class="message-time">',
+    spanTimeClose = '</span>';
   $('#msgwriter').keypress(function(e) {
 		if (e.which == 13) {
 			var thisInput = $(this),
@@ -52,4 +55,27 @@ spanTimeClose = '</span>';
 			}
 		}
 	});
+  //istruzioni per cercare tra i contatti
+  var searchinput=$('#leftinput').val().toLowerCase();
+
+    searchinput.keyup(function(){
+      var nome=$('.contact').children('.info-container').children('.contact-name').text()
+      nome=nome.toLowerCase();
+
+
+
+      $('.contact').each(function(){
+        if(!nome.includes(searchinput)){
+          $(this).hide();
+    }
+    else{
+      this.show();
+    }
+
+
+
+
   });
+
+});
+});

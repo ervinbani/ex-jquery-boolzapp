@@ -8,11 +8,12 @@ body{
 }
 header{
   width:100vw;
-  height: 40px;
+  height: 30px;
   background: #009688;
   color:white;
   top: 0;
   position: sticky;
+  line-height: 30px;
 }
 
 nav{
@@ -76,6 +77,7 @@ nav{
   width: 100%;
   height: 100%;
   border:5px solid #FBFBFB;
+  display: flex;
 }
 
 .left-container{
@@ -96,13 +98,13 @@ nav{
   background: lightgrey;
   cursor: pointer;
 }
-#contact-img{
+.contact-img{
   width: 20%;
   height: 100%;
   float: left;
 
 }
-#contact-img>img{
+.contact-img>img{
   height: 100%;
   border-radius:50%;
 
@@ -161,7 +163,7 @@ nav{
 
 }
 .right-container .greentext{
-  width:51%;
+  width:auto;
   height:auto;
   float:right;
   margin-right: 50px;
@@ -173,7 +175,7 @@ nav{
 }
 .right-container .whitetext{
   padding-top:0;
-  width:51%;
+  width:auto;
   height: auto;
   margin-left: 50px;
   float:left;
@@ -184,4 +186,5 @@ nav{
 }
 .clear{
   clear: both;
+  height: 30px;
 }
