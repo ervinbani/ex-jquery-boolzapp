@@ -2,14 +2,13 @@
 
 $(document).ready(function(){
 
-
-
     var cont=$('.contact');
-  cont.each(function(){
-    $(this).click(function(){
-    $('.friends-img').attr("src",$('.contact-image').attr("src"));
+    cont.each(function(){
 
-    $('.Contatto').text($('.contact-name').text());
+    $(this).click(function(){
+    $('.friends-img').attr("src", $(this).children('.contact-img').children('.contact-image').attr("src"));
+
+    $('.Contatto').text($(this).children('.info-container').children('.contact-name').text());
 
 });
   });
@@ -56,21 +55,22 @@ $(document).ready(function(){
 		}
 	});
   //istruzioni per cercare tra i contatti
-  var searchinput=$('#leftinput').val().toLowerCase();
-
+  var searchinput=$('#leftinput');
     searchinput.keyup(function(){
-      var nome=$('.contact').children('.info-container').children('.contact-name').text()
-      nome=nome.toLowerCase();
-
-
 
       $('.contact').each(function(){
-        if(!nome.includes(searchinput)){
+        var nome=$(this).children('.info-container').children('.contact-name').text();
+        nome=nome.toLowerCase();
+
+        if(!nome.includes(searchinput.val().toLowerCase())){
           $(this).hide();
     }
+
+
     else{
-      this.show();
+      $(this).show();
     }
+
 
 
 
