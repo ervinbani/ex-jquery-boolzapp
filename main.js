@@ -2,16 +2,7 @@
 
 $(document).ready(function(){
 
-    var cont=$('.contact');
-    cont.each(function(){
 
-    $(this).click(function(){
-    $('.friends-img').attr("src", $(this).children('.contact-img').children('.contact-image').attr("src"));
-
-    $('.Contatto').text($(this).children('.info-container').children('.contact-name').text());
-
-});
-  });
   var messaggio=$('#btn-right');
   var input=$('#msgwriter');
       messaggio.click(function(){
@@ -30,52 +21,64 @@ $(document).ready(function(){
     messageTagClose = '</div>',
     spanTimeOpen = '<span class="message-time">',
     spanTimeClose = '</span>';
-  $('#msgwriter').keypress(function(e) {
+  $('.msgwriter').keypress(function(e) {
 		if (e.which == 13) {
 			var thisInput = $(this),
 			newMessage = thisInput.val(),
 			now = new Date();
 
-			if (newMessage) {
-				//now i can append to the messages
-				var footerCnt = thisInput.parent(),
-				rightContainer = footerCnt.parent()
-				messagesContainer = rightContainer.children('.right-messages');
+        $('.contact').each(function(){
+          var thisContact=$(this);
+    			if (newMessage) {
+        				//now i can append to the messages
+        				  thisContact.children('.msg-container').append(
+        					messageTagOpen + newMessage + spanTimeOpen + now.getHours() + ':' + now.getMinutes() + spanTimeClose + messageTagClose + clearDiv
+        				);
+                thisContact.children('.msg-container').append("<div class='whitetext'>"
+                   + "Ok" + "</div>");
 
-				  $('.right-container').append(
-					messageTagOpen + newMessage + spanTimeOpen + now.getHours() + ':' + now.getMinutes() + spanTimeClose + messageTagClose + clearDiv
-				);
-        $('.right-container').append("<div class='whitetext'>"
-           + "Ok" + "</div>");
+                thisInput.val('');
 
-				thisInput.val('');
+    				    messagesContainer.scrollTop(messagesContainer[0].scrollHeight)
+    			}
+        });
+          thisInput.val('');
 
-				messagesContainer.scrollTop(messagesContainer[0].scrollHeight)
-			}
-		}
+    }
 	});
+
+  //var cont=$('.contact');
+
+$('.contact').each(function(){
+  $(this).click(function(){
+
+      $('.friends-img').attr("src", $(this).children('.contact-img').children('.contact-image').attr("src"));
+
+      $('.Contatto').text($(this).children('.info-container').children('.contact-name').text());
+      $(this).children('.msg-container').show();
+
+
+  });
+});
+
+
   //istruzioni per cercare tra i contatti
   var searchinput=$('#leftinput');
     searchinput.keyup(function(){
 
       $('.contact').each(function(){
-        var nome=$(this).children('.info-container').children('.contact-name').text();
-        nome=nome.toLowerCase();
+            var nome=$(this).children('.info-container').children('.contact-name').text();
+            nome=nome.toLowerCase();
 
-        if(!nome.includes(searchinput.val().toLowerCase())){
-          $(this).hide();
-    }
-
-
-    else{
-      $(this).show();
-    }
+              if(!nome.includes(searchinput.val().toLowerCase())){
+                $(this).hide();
+              }
 
 
-
-
-
-  });
+              else{
+                $(this).show();
+              }
+          });
 
 });
 });

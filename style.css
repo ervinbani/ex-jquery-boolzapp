@@ -93,6 +93,8 @@ nav{
   border-radius: 5px;
   float:left;
   border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: flex-start;
 }
 .left-container .contact:hover{
   background: lightgrey;
@@ -116,11 +118,23 @@ nav{
   float: right;
 
 }
-.right-container{
+.msg-container{
+  display:none;
+  position: absolute;
+  right:-0.1px;
+  top:95px;
+  background:red;
+  float: right;
   width: 70%;
   min-height: 900px;
   background-image: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
   background-size: cover;
+}
+.right-container{
+  display:
+  width: 70%;
+  min-height: 900px;
+  background: blue;
   float: left;
 }
 #leftinput{
@@ -155,14 +169,14 @@ nav{
 
 
 }
-#msgwriter{
+.msgwriter{
   width:50%;
   padding-top: 0;
   outline: none;
   border: none;
 
 }
-.right-container .greentext{
+ .greentext{
   width:auto;
   height:auto;
   float:right;
@@ -173,7 +187,7 @@ nav{
   background-color: #DCF8C6;
   color: black;
 }
-.right-container .whitetext{
+ .whitetext{
   padding-top:0;
   width:auto;
   height: auto;
