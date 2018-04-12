@@ -39,7 +39,7 @@ $(document).ready(function(){
 
                 thisInput.val('');
 
-    				    messagesContainer.scrollTop(messagesContainer[0].scrollHeight)
+    				    $('.msg-container').scrollTop(messagesContainer[i].scrollHeight)
     			}
         });
           thisInput.val('');
@@ -55,7 +55,7 @@ $('.contact').each(function(){
       $('.friends-img').attr("src", $(this).children('.contact-img').children('.contact-image').attr("src"));
 
       $('.Contatto').text($(this).children('.info-container').children('.contact-name').text());
-      
+
       $(this).children('.msg-container').show();
 
 
