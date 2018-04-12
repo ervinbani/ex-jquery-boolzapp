@@ -131,8 +131,7 @@ nav{
   background-size: cover;
 }
 .right-container{
-  display:
-  width: 70%;
+  width:70%;
   min-height: 900px;
   background: blue;
   float: left;
@@ -160,7 +159,7 @@ nav{
 }
 
 
-#writer{
+.writer{
   display: flex;
   position: fixed;
   width: 100%;
