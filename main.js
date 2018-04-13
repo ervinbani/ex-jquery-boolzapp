@@ -27,40 +27,44 @@ $(document).ready(function(){
 			newMessage = thisInput.val(),
 			now = new Date();
 
-        $('.contact').each(function(){
-          var thisContact=$(this);
-    			if (newMessage) {
-        				//now i can append to the messages
-        				  thisContact.children('.msg-container').append(
-        					messageTagOpen + newMessage + spanTimeOpen + now.getHours() + ':' + now.getMinutes() + spanTimeClose + messageTagClose + clearDiv
-        				);
-                thisContact.children('.msg-container').append("<div class='whitetext'>"
-                   + "Ok" + "</div>");
 
-                thisInput.val('');
+        //$('.left-container').children('.contact').adclass('active');
+        $('.contact').addClass('active');
 
-    				    $('.msg-container').scrollTop(messagesContainer[i].scrollHeight)
-    			}
-        });
-          thisInput.val('');
+        //var activeContact = $('.contact.active');
+      if (newMessage) {
+            //now i can append to the messages
+              $('.contact').children('.msg-container').append(
+              messageTagOpen + newMessage + spanTimeOpen + now.getHours() + ':' + now.getMinutes() + spanTimeClose + messageTagClose + clearDiv
+            );
+            $('.contact').children('.msg-container').append("<div class='whitetext'>"
+               + "Ok" + "</div>");
+
+            thisInput.val('');
+
+            $('.msg-container').scrollTop(messagesContainer[i].scrollHeight)
+      }
+
+      thisInput.val('');
+
+
 
     }
 	});
 
   //var cont=$('.contact');
 
-$('.contact').each(function(){
-  $(this).click(function(){
+  $('.contact').click(function(){
 
       $('.friends-img').attr("src", $(this).children('.contact-img').children('.contact-image').attr("src"));
 
       $('.Contatto').text($(this).children('.info-container').children('.contact-name').text());
 
       $(this).children('.msg-container').show();
+      $('.contact').not($(this)).children('.msg-container').hide();
 
 
   });
-});
 
 
   //istruzioni per cercare tra i contatti

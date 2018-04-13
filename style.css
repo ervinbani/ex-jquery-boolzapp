@@ -133,7 +133,8 @@ nav{
 .right-container{
   width:70%;
   min-height: 900px;
-  background: blue;
+  background-image: url(image/wbg.png);
+  background-size: cover;
   float: left;
 }
 #leftinput{
