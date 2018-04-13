@@ -53,6 +53,26 @@ $(document).ready(function(){
 	});
 
   //var cont=$('.contact');
+  //ISTRUZIONI PER CANCELLARE UN messaggi
+  $(document).on("mouseenter mouseleave", '.msg-container', function(){
+     $(this).children('.dropdown').toggle();
+  });
+  //Quando clicco sulla freccina si apre il menù a tendina
+  $(document).on('click','.dropdown', function(){
+     $(this).children('.menu').slideDown();
+  });
+  $(document).on('mouseleave', '.dropdown', function(){
+     $(this).children('.menu').hide();
+  });
+
+  $(document).on('click', '.elimina', function(){
+     $(this).parents('.whitetext').remove();
+  });
+  $(document).on('click', '.elimina', function(){
+     $(this).parents('.greentext').remove();
+  });
+
+
 
   $('.contact').click(function(){
 

@@ -98,7 +98,6 @@ nav{
 }
 .left-container .contact:hover{
   background: lightgrey;
-  cursor: pointer;
 }
 .contact-img{
   width: 20%;
@@ -130,6 +129,78 @@ nav{
   background-image: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
   background-size: cover;
 }
+.msg-container .greentext .dropdown2{
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+
+  border-top: 10px solid white;
+  position: absolute;
+  top: 0;
+  left: 200px;
+  z-index: 10;
+}
+ .dropdown2{
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+
+  border-top: 10px solid #DCF8C6;
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 8px;
+}
+.dropdown{
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+
+  border-top: 8px solid lightgrey;
+  position: absolute;
+  top: -2px;
+  right: 5px;
+  cursor: pointer;
+}
+.msg-container .greentext .dropdown{
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+
+  border-top: 8px solid lightgrey;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+.colorWhite{
+  background-color: white;
+}
+.colorGreen{
+  background-color: #DCF8C6;
+}
+.dropdown .menu{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  background-color: white;
+  padding: 10px 15px;
+  border: 1px solid black;
+}
+.menu .elimina{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
 .right-container{
   width:70%;
   min-height: 900px;
@@ -177,8 +248,8 @@ nav{
 
 }
  .greentext{
-  width:auto;
-  height:auto;
+  min-width:20px;
+  min-height:30px;
   float:right;
   margin-right: 50px;
   padding-left:10px;
@@ -186,6 +257,7 @@ nav{
   border-radius: 5px;
   background-color: #DCF8C6;
   color: black;
+  position:relative;
 }
  .whitetext{
   padding-top:0;
@@ -197,6 +269,7 @@ nav{
   border-radius: 5px;
   background: white;
   color: black;
+  position: relative;
 }
 .clear{
   clear: both;
