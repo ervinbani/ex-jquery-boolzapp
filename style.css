@@ -253,17 +253,20 @@ nav{
   float:right;
   margin-right: 50px;
   padding-left:10px;
+  padding-right:15px
   border:1px solid #DCF8C6;
   border-radius: 5px;
   background-color: #DCF8C6;
   color: black;
   position:relative;
+
 }
  .whitetext{
   padding-top:0;
-  width:auto;
-  height: auto;
+  min-width:50px;
+  min-height: 20px;
   margin-left: 50px;
+  padding-right:15px;
   float:left;
   border:1px solid white;
   border-radius: 5px;
