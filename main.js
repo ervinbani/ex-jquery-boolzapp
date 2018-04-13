@@ -42,7 +42,9 @@ $(document).ready(function(){
 
             );
             $('.contact').children('.msg-container').append("<div class='whitetext'>"
-               + "Ok" + "</div>");
+               + "Ok" +'<div class="dropdown colorGreen">'+
+                 '<div class="menu">'+'<a class="elimina" href="#">'+"Elimina" +
+                 '</a>'+'</div>'+'<div class="dropdown2">' + '</div>' +'</div>'+ "</div>");
 
             thisInput.val('');
 
