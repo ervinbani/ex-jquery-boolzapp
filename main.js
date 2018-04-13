@@ -35,7 +35,11 @@ $(document).ready(function(){
       if (newMessage) {
             //now i can append to the messages
               $('.contact').children('.msg-container').append(
-              messageTagOpen + newMessage + spanTimeOpen + now.getHours() + ':' + now.getMinutes() + spanTimeClose + messageTagClose + clearDiv
+              messageTagOpen + newMessage + spanTimeOpen + now.getHours() + ':'
+              + now.getMinutes() + spanTimeClose + '<div class="dropdown colorGreen">'+
+                '<div class="menu">'+'<a class="elimina" href="#">'+"Elimina" +
+                '</a>'+'</div>'+'<div class="dropdown2">' + '</div>' +'</div>' + messageTagClose + clearDiv
+
             );
             $('.contact').children('.msg-container').append("<div class='whitetext'>"
                + "Ok" + "</div>");
@@ -57,7 +61,6 @@ $(document).ready(function(){
   $(document).on("mouseenter mouseleave", '.msg-container', function(){
      $(this).children('.dropdown').toggle();
   });
-  //Quando clicco sulla freccina si apre il menù a tendina
   $(document).on('click','.dropdown', function(){
      $(this).children('.menu').slideDown();
   });
