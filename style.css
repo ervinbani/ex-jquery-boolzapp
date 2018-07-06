@@ -251,6 +251,7 @@ nav{
   min-width:20px;
   min-height:30px;
   float:right;
+  padding-top:10px;
   margin-right: 50px;
   padding-left:10px;
   padding-right:15px
@@ -277,4 +278,12 @@ nav{
 .clear{
   clear: both;
   height: 30px;
+}
+.active{
+  color: black;
+}
+.message-time{
+  font-size: 11px;
+  margin-left:10px;
+  float:right;
 }

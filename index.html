@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Whatsa web</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <title>Whatsa web</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
   <body>
     <header>Whatsapp Web</header>
       <nav id="menu">
@@ -14,13 +14,13 @@
         <div id="profilo">
           <img src="image/profilo.jpeg">
           <div id="icons-menu">
-            <i class="fas fa-circle-notch"></i>
-            &nbsp
-            <i class="fas fa-comment-alt"></i>
-            &nbsp
+              <i class="fas fa-circle-notch"></i>
+              &nbsp
+              <i class="fas fa-comment-alt"></i>
+              &nbsp
 
-            <i class="fas fa-ellipsis-v"></i>
-            &nbsp
+              <i class="fas fa-ellipsis-v"></i>
+              &nbsp
           </div>
         </div>
         <div id="friends">
@@ -45,15 +45,15 @@
           <button class="btn" id="btn-left" type="button" name="button"><i class="fas fa-search"></i></button><input id="leftinput"   placeholder="Cerca o inizia una nuova chat" type="text" name="" value="">
         </div>
 
-        <div class="contact">
-          <div class="contact-img">
-            <img class="contact-image" src="image/pepe.jpg" alt="">
-          </div>
-          <div class="info-container">
-            <span class="contact-name">Domenico </span>
-            <br>
-          <span class="text-msg">Ciao!</span>
-        </div>
+        <div class="contact active">
+            <div class="contact-img">
+              <img class="contact-image" src="image/pepe.jpg" alt="">
+            </div>
+            <div class="info-container">
+                  <span class="contact-name">Domenico </span>
+                  <br>
+                  <span class="text-msg">Ciao!</span>
+            </div>
               <div class="msg-container">
                  <div class="greentext">
                    Ciaoo Domenico, come stai???
@@ -67,10 +67,8 @@
 
                  </div>
                  <div class="clear"></div>
-
-
-
-                  <br><div class="whitetext">Bene grazie
+                  <br>
+                  <div class="whitetext">Bene grazie
                     <div class="dropdown colorWhite">
                        <div class="menu">
                           <a class="elimina" href="#">Elimina</a>
@@ -79,7 +77,6 @@
 
                     </div>
                   </div>
-
                   <div class="writer">
                       <button  class="btn" type="button" name="button">
                       <i class="fas fa-smile"></i></i></button>
@@ -87,23 +84,20 @@
                       <button id="btn-right" class="btn" type="button" name="button">
                         <i class="fas fa-paper-plane"></i>
                       </button>
-
-
-
-              </div>
+                  </div>
 
         </div>
       </div>
 
 
-        <div class="contact">
+        <div class="contact active">
           <div class="contact-img"><img class="contact-image" src="image/davide.jpg" alt=""></div>
           <div class="info-container"><span class="contact-name">Davide </span><br>
           <span class="text-msg">Ciao!</span>
         </div>
         <div class="msg-container">
            <div class="greentext">
-              >Ciaoo Davide, come stai???
+              Ciaoo Davide, come stai???
               <div class="dropdown colorGreen">
                  <div class="menu">
                     <a class="elimina" href="#">Elimina</a>
@@ -112,6 +106,15 @@
 
               </div>
            </div>
+           <div class="writer">
+               <button  class="btn" type="button" name="button">
+               <i class="fas fa-smile"></i></i></button>
+               <input class="msgwriter"  placeholder="Scrivi un messaggio" type="text" name="" value="">
+               <button id="btn-right" class="btn" type="button" name="button">
+                 <i class="fas fa-paper-plane"></i>
+               </button>
+           </div>
+           <div class="clear"></div>
             <br><div  class="whitetext">Bene grazie
               <div class="dropdown colorWhite">
                  <div class="menu">
@@ -124,7 +127,7 @@
 
         </div>
         </div>
-        <div class="contact">
+        <div class="contact active">
           <div class="contact-img">
             <img class="contact-image" src="image/robert.jpg" alt="">
           </div>
@@ -136,7 +139,7 @@
 
           <div class="msg-container">
             <div class="greentext">
-               >Ciaoo Robert, come stai???
+               Ciaoo Robert, come stai???
                <div class="dropdown colorGreen">
                   <div class="menu">
                      <a class="elimina" href="#">Elimina</a>
@@ -145,6 +148,15 @@
 
                </div>
             </div>
+            <div class="writer">
+                <button  class="btn" type="button" name="button">
+                <i class="fas fa-smile"></i></i></button>
+                <input class="msgwriter"  placeholder="Scrivi un messaggio" type="text" name="" value="">
+                <button id="btn-right" class="btn" type="button" name="button">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="clear"></div>
               <br><div  class="whitetext">Bene grazie
                 <div class="dropdown colorWhite">
                    <div class="menu">
@@ -158,23 +170,32 @@
           </div>
 
         </div>
-        <div class="contact">
+        <div class="contact active">
            <div class="contact-img"><img class="contact-image" src="image/manuel.jpg" alt=""></div>
            <div class="info-container"><span class="contact-name">Manuel</span><br>
            <span class="text-msg">Ciao!</span></div>
            <div class="msg-container">
-             <div class="greentext">
-                 Ciaoo Manuel, come stai???
-                <div class="dropdown colorGreen">
-                   <div class="menu">
-                      <a class="elimina" href="#">Elimina</a>
-                   </div>
-                   <div class="dropdown2"></div>
+               <div class="greentext">
+                   Ciaoo Manuel, come stai???
+                  <div class="dropdown colorGreen">
+                     <div class="menu">
+                        <a class="elimina" href="#">Elimina</a>
+                     </div>
+                     <div class="dropdown2"></div>
 
-                </div>
-             </div>
-
-               <br><div  class="whitetext">Bene grazie
+                  </div>
+               </div>
+               <div class="writer">
+                   <button  class="btn" type="button" name="button">
+                   <i class="fas fa-smile"></i></i></button>
+                   <input class="msgwriter"  placeholder="Scrivi un messaggio" type="text" name="" value="">
+                   <button id="btn-right" class="btn" type="button" name="button">
+                     <i class="fas fa-paper-plane"></i>
+                   </button>
+               </div>
+             <div class="clear"></div>
+               <br>
+               <div  class="whitetext">Bene grazie
                  <div class="dropdown colorWhite">
                     <div class="menu">
                        <a class="elimina" href="#">Elimina</a>
@@ -199,14 +220,7 @@
            <span class="greentext" ></span>
          </div>
           <br><div><span class="whitetext" ></span></div>
-        <div class="writer">
-          <button  class="btn" type="button" name="button">
-          <i class="fas fa-smile"></i></i></button>
-          <input class="msgwriter"  placeholder="Scrivi un messaggio" type="text" name="" value="">
-          <button id="btn-right" class="btn" type="button" name="button">
-            <i class="fas fa-paper-plane"></i>
-          </button>
-        </div>
+
       </div>
 
 

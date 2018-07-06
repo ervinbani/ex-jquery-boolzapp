@@ -16,47 +16,70 @@ $(document).ready(function(){
 
 
   });
+
+//istruzione per assocciare un solo contatto
+$('.contact').click(function(){
+
+    $('.friends-img').attr("src", $(this).children('.contact-img').children('.contact-image').attr("src"));
+
+    $('.Contatto').text($(this).children('.info-container').children('.contact-name').text());
+
+    $(this).children('.msg-container').show();
+    $('.contact').not($(this)).children('.msg-container').hide();
+
+
+});
+
+//istruzioni per inserire un messaggio al contatto e ricevere una risposta
   var clearDiv = '<div class="clear"></div>',
     messageTagOpen = '<div class="greentext">',
     messageTagClose = '</div>',
     spanTimeOpen = '<span class="message-time">',
     spanTimeClose = '</span>';
+    //$('.contact').addClass('active');
+    //var activeContact = $('.contact.active');
+
   $('.msgwriter').keypress(function(e) {
 		if (e.which == 13) {
-			var thisInput = $(this),
-			newMessage = thisInput.val(),
-			now = new Date();
+  			var thisInput = $(this),
+  			newMessage = thisInput.val(),
+  			now = new Date();
 
-
-        //$('.left-container').children('.contact').adclass('active');
-        $('.contact').addClass('active');
-
-        //var activeContact = $('.contact.active');
-      if (newMessage) {
+      if (newMessage)  {
             //now i can append to the messages
-              $('.contact').children('.msg-container').append(
-              messageTagOpen + newMessage + spanTimeOpen + now.getHours() + ':'
-              + now.getMinutes() + spanTimeClose + '<div class="dropdown colorGreen">'+
-                '<div class="menu">'+'<a class="elimina" href="#">'+"Elimina" +
-                '</a>'+'</div>'+'<div class="dropdown2">' + '</div>' +'</div>' + messageTagClose + clearDiv
+          //$('.contact').not($(this)).removeClass('active');
 
-            );
-            $('.contact').children('.msg-container').append("<div class='whitetext'>"
-               + "Ok" +'<div class="dropdown colorGreen">'+
+
+             $(this).parent('.writer').parent('.msg-container').append(
+              messageTagOpen + newMessage + spanTimeOpen + now.getHours()  + ':'
+               + now.getMinutes()  + spanTimeClose +
+               '<div class="dropdown colorGreen">'+
+                '<div class="menu">' + '<a class="elimina" href="#">'+"Elimina" +
+                '</a>'+'</div>'+'<div class="dropdown2">' + '</div>'
+                +'</div>' + messageTagClose + clearDiv);
+
+
+
+
+            $(this).parent('.writer').parent('.msg-container').append("<div class='whitetext'>"
+               + "Ok" + spanTimeOpen + now.getHours() + ':' + now.getMinutes() + spanTimeClose + '<div class="dropdown colorGreen">'+
                  '<div class="menu">'+'<a class="elimina" href="#">'+"Elimina" +
                  '</a>'+'</div>'+'<div class="dropdown2">' + '</div>' +'</div>'+ "</div>");
 
             thisInput.val('');
 
-            $('.msg-container').scrollTop(messagesContainer[i].scrollHeight)
+            //$('.msg-container').scrollTop(messagesContainer[i].scrollHeight);
+
       }
+
 
       thisInput.val('');
 
 
 
-    }
-	});
+
+
+	}
 
   //var cont=$('.contact');
   //ISTRUZIONI PER CANCELLARE UN messaggi
@@ -79,17 +102,7 @@ $(document).ready(function(){
 
 
 
-  $('.contact').click(function(){
 
-      $('.friends-img').attr("src", $(this).children('.contact-img').children('.contact-image').attr("src"));
-
-      $('.Contatto').text($(this).children('.info-container').children('.contact-name').text());
-
-      $(this).children('.msg-container').show();
-      $('.contact').not($(this)).children('.msg-container').hide();
-
-
-  });
 
 
   //istruzioni per cercare tra i contatti
@@ -111,4 +124,6 @@ $(document).ready(function(){
           });
 
 });
+});
+
 });
